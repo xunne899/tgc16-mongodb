@@ -1,0 +1,17 @@
+[
+    {
+        "_id":45612,
+        "name":"Tan Ah Pa",
+        "address":{
+            "street_name":"Yishun Ring Road",
+            "block_number": 171,
+            "postal_code":"S117171"
+        },
+        "available_payment_types":[
+            "master",
+            "paynow"
+        ],
+        "contact_no": 9919923
+    }
+
+]

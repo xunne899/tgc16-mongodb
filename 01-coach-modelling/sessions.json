@@ -1,0 +1,24 @@
+[
+
+    {
+        "_id": "123456X",
+        "date": "2022-06-29",
+        "time": "1600",
+        "location": "Yishun Swimming Pool",
+        "students": [{
+                "student_id": 101,
+                "name": "Tan Ah Kow",
+                "age": 3
+            },
+            {
+                "student_id": 102,
+                "name": "Mary Tan",
+                "age": 4
+            }
+        ]
+    }
+
+
+
+
+]
