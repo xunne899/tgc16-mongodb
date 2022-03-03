@@ -1,6 +1,8 @@
 {{#extends 'base'}}
 
 {{#block "content"}}
+<h1>All Food</h1>
+<a href="/food/add" class="btn btn-primary">Add New Food</a>
 <table class="table">
     <thead>
         <tr>
@@ -19,6 +21,15 @@
             <td>{{this.name}}</td>
             <td>{{this.calories}}</td>
             <td>{{this.tags}}</td>
-            <td><a href="/food/{{this._id}}/edit" class="btn btn-primary btn-sm">Edit</a></td>
+            <td>
+                <a href="/food/{{this._id}}/edit" class="btn btn-primary btn-sm">Edit</a>
+                <a href="/food/{{this._id}}/delete" class="btn btn-danger btn-sm">Delete</a>
+                <a href="/food/{{this._id}}/notes/add" class="btn btn-success btn-sm">Add Note</a>
+                <a href="/food/{{this._id}}/notes" class="btn btn-primary btn-sm">View Notes</a>
+            </td>
         </tr>
     {{/each}}
+</table>
+{{/block}}
+
+{{/extends}}
