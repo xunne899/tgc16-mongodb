@@ -72,6 +72,19 @@ db.listingsAndReviews.find({
 ).pretty();
 Search for all listings that have between 3 and 6 bedrooms.
 
+//example
+ db.listingsAndReviews.find({
+    'bedrooms':{
+        '$gte':3
+    }
+},{
+    'name':1,
+    'bedrooms':1
+        }
+        ).pretty()
+
+
+
 db.listingsAndReviews.find({
     'bedrooms':{
         '$gte':3,
@@ -81,7 +94,42 @@ db.listingsAndReviews.find({
     'bedrooms':1,
     'name':1
 }).pretty()
+
+
+
+//example
+db.listingsAndReviews.find({
+    'bedrooms':{
+        '$gte':3,
+        '$lte':6
+    }
+},{
+    'bedrooms':1,
+    'name':1,
+    'beds':1
+}).pretty().limit(2)
 example: find all listings in Brazil that has less than 4 bedrooms db.listingsAndReviews.find({ 'address.country':'Brazil', 'bedrooms': { '$lte':4 } },{ 'address.country':1, 'name':1, 'bedrooms':1, 'beds':1 }).pretty()
+
+//example
+let criteria = {
+    'beds':{
+        '$gte':4,
+        '$lte':6
+    },
+    'bedrooms':3
+};
+
+let projection = {
+    'beds':1,
+    'name':1,
+    'bedrooms':1
+};
+
+db.listingsAndReviews.find(criteria, projection);
+
+
+
+
 
 ## Find by elements in array
 
@@ -91,6 +139,16 @@ db.listingsAndReviews.find({ 'amenities':'Oven' },{ 'name':1, 'amenities':1 }).p
 
 eg. Find all listings that have oven, OR microwave OR stove
 db.listingsAndReviews.find({ 'amenities':{ '$in':['Oven', 'Microwave', 'Stove'] } },{ 'name':1, 'amenities':1 }).pretty()
+
+//example
+ db.listingsAndReviews.find({
+     'amenities':{
+         '$in':['TV','Cable TV']
+     }
+ },{
+     'name': 1,
+     'amenities':1
+ }).pretty().limit(5)
 
 
 eg. $all will only match if everything in array is in amenities

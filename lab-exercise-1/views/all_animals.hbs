@@ -1,0 +1,61 @@
+{{!-- {{#extends 'base'}}
+
+{{#block "content"}}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Type</th>
+            <th>Gender</th>
+            <th>Notes</th>
+        </tr>
+
+    </thead>
+
+    {{#each animals }}
+        <tr>
+            <td>{{this._id}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.age}}</td>
+            <td>{{this.type}}</td>
+            <td>{{this.gender}}</td>
+        </tr>
+    {{/each}}
+</table>
+{{/block}}
+
+{{/extends}} --}}
+
+
+
+{{#extends 'base'}}
+
+{{#block "content"}}
+<a href="/animals/add" class="btn btn-primary">Add New</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Type</th>
+            <th>Gender</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    {{#each animals}}
+    <tr>
+        <td>{{this._id}}</td>
+        <td>{{this.animalName}}</td>
+        <td>{{this.age}}</td>
+        <td>{{this.animalType}}</td>
+        <td>{{this.gender}}</td>
+        <td>{{this.notes}}</td>
+    </tr>
+    {{/each}}
+</table>
+{{/block}}
+
+{{/extends}}

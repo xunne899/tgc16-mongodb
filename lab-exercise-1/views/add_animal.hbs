@@ -1,0 +1,96 @@
+{{!-- {{#extends "base"}}
+
+{{#block "content"}}
+<h1>Add New Animals</h1>
+<form method="POST">
+    <div class = "row">
+        <label class="col-2" >Name</label>
+        <input type="text" class="form-control" id="name" name="animalName">
+    </div>
+    <div>
+      <div class="row">
+        <label class="col-2">Age</label>
+        <input type="text" class="form-control" id="calories" name="calories">
+    </div>
+    </div>
+<div class="dropdown">
+    <label>Type</label>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#" value="dogs" >dogs</a>
+    <a class="dropdown-item" href="#" value="cats">cats</a>
+    <a class="dropdown-item" href="#"value="rabbits">rabbits</a>
+    <a class="dropdown-item" href="#"value="hamsters">hamsters</a>
+    <a class="dropdown-item" href="#"value="others">rabbits</a>
+  </div>
+</div>
+
+<div class="form-check">
+  <label>Gender</label>
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" name="male" for="flexRadioDefault1">
+   male
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <label class="form-check-label" name="female" for="flexRadioDefault2">
+    female
+  </label>
+</div>
+
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary mt-3"/>
+</form>
+{{/block}}
+
+{{/extends}} --}}
+
+
+{{#extends 'base'}}
+
+{{#block "content"}}
+<h1>Add a new animal</h1>
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-2" for="name">Name:</label>
+        <input type="text" class="col form-control" id="name" name="animalName"/> 
+    </div>
+    <div class="row mb-3">
+        <label class="col-2">Age:</label>
+        <input type="text" class="col form-control" name="age"/> 
+    </div>
+    <div class="row mb-3">
+        <label class="col-2">Animal Type:</label>
+        <select name="animalType" class="form-control col">
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>    
+            <option value="hamsters">Hamster</option>    
+            <option value="rabbit">Rabbit</option> 
+            <option value="others">Others</option>              
+        </select>
+    </div>
+    <div class="row mb-3">
+        <label class="col-2">Gender</label>
+        <div class="col">
+            <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="male-gender" value="male">
+                    <label class="form-check-label" for="male-gender">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female-gender" value="female">
+                <label class="form-check-label" for="female-gender">Female</label>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-2">Notes</label>
+        <textarea name="notes" class="col form-control"></textarea>
+    </div>
+    <input type="submit" class="btn btn-primary mt-3"/>
+</form>
+{{/block}}
+
+{{/extends}}
