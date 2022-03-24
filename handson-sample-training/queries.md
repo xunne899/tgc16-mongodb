@@ -77,7 +77,7 @@ db.companies.find({
 })
 
 
-## perfume collection
+##  3b perfume-collection
 
 db.perfume.insertMany([
     {
@@ -128,4 +128,4 @@ db.perfume.updateOne({
     }
 })
 
-## self notes 
+## perfume add new collection
