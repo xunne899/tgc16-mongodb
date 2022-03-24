@@ -127,3 +127,5 @@ db.perfume.updateOne({
         'capacity': '100ml'
     }
 })
+
+## self notes 
