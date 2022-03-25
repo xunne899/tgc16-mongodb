@@ -112,6 +112,19 @@ db.perfume.updateOne({
     }
 })
 
+
+
+db.perfume.updateOne({
+        '_id':ObjectId("623cbd2db6366ca99675dde3")
+}, {
+    '$set': {
+        'capacity':'150ml'
+    }
+})
+
+
+
+
 Delete object 
 db.perfume.deleteOne({
     '_id': ObjectId("623cbd2db6366ca99675dde2")
