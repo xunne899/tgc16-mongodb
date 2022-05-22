@@ -22,7 +22,12 @@ db.companies.find().pretty()
 
 
 
+db.listingsAndReviews.find({
 
+    'beds' : 2
+    },{
+        'name':1, 'address':1, 'beds':1
+    }).pretty().limit(5)
 
 db.companies.find().pretty().limit(5);
 
