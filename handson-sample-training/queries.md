@@ -7,7 +7,7 @@ use sample_training;
 To know what is the current database
 
 db
-To see all the collections in the current actiee database:
+To see all the collections in the current active database:
 
 show collections
 Find documents
@@ -20,7 +20,7 @@ Prettify the result:
 db.companies.find().pretty()
 
 
-
+use sample_airbnb
 
 db.listingsAndReviews.find({
 
@@ -30,6 +30,17 @@ db.listingsAndReviews.find({
     }).pretty().limit(5)
 
 db.companies.find().pretty().limit(5);
+
+
+db.listingsAndReviews.find({
+    'beds':2
+    },{
+        'name':1,
+        'address':1,
+        'beds':1,  
+        'bed_type':1
+        
+}).pretty().limit(5)
 
 ## 1a
 db.companies.find({
@@ -60,7 +71,15 @@ db.companies.find({
             'founded_year':1
     }).pretty();
 
-
+db.companies.find({
+    'founded_year':{
+        '$gte':1800,
+        '$lte':2030
+    }
+},{
+    'name':1,
+    'founded_year':1
+}).pretty()
 
 
 ## 2a
